@@ -525,7 +525,7 @@ header {
 
     html { zoom: 1; }
 
-    /* --- navbar: mostra logo + abas compactas, esconde busca --- */
+    /* --- navbar: logo + abas + busca em coluna --- */
     header {
         padding: 12px 16px;
         background: var(--bg);
@@ -553,7 +553,11 @@ header {
         text-align: center;
     }
     .search_nav {
-        display: none; /* esconde só a busca */
+        display: flex; /* busca visível */
+        width: 100%;
+    }
+    .search_nav input {
+        width: 100%; /* ocupa largura toda no celular */
     }
 
     /* --- hero --- */
@@ -611,19 +615,19 @@ header {
         font-size: 16px;
     }
 
-    /* imagem do Cristo menor e centralizada */
+    /* imagem do Cristo menor — aparece rosto inteiro tipo 3x4 */
     .hero_image {
-        width: 100%;
-        margin: 0;
+        width: 60%;
+        margin: 10px auto 0 auto;
         position: relative;
-        height: 200px;
+        height: 260px;
         justify-content: center;
     }
     .hero_image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 10%; /* puxa um pouco pra baixo pra aparecer o rosto */
     }
 
     /* --- filtros centralizados com borda colada nas laterais --- */
@@ -685,9 +689,11 @@ header {
         text-align: left;
     }
 
-    /* imagem do coração menor */
+    /* imagem do coração menor — aparece imagem inteira tipo 3x4 */
     .coracao {
-        height: 160px;
+        width: 60%;
+        height: 220px;
+        margin: 0 auto;
         overflow: hidden;
         justify-content: center;
     }
@@ -695,7 +701,7 @@ header {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center top;
+        object-position: center 15%;
     }
 
     /* --- rodapé centralizado --- */
