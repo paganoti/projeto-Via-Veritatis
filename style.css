@@ -1,0 +1,474 @@
+:root {
+    --bg: #080808;
+    --surface: #0f0f0f;
+    --surface2: #161616;
+    --borda: #2a2418;
+    --dourado: #c9a84c;
+    --dourado2: #e8c97a;
+    --texto: #e8e4d8;
+    --muted: #6b6558;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+    --mono: 'Space Mono', monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: var(--bg);
+    color: var(--texto);
+    font-family: var(--serif);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 5px;
+    
+}
+.logo {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    font-size: 20px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 20px;
+
+}
+
+.logo {
+    color: var(--dourado);
+    
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* zerar o padding e o margin para alinhar a lista */
+    padding: 0;
+    gap: 35px;
+    font-family: var(--mono);
+    font-size: 12px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    padding: 5px; /* espaço entre a borda e as abas */
+    background: var(--surface2);
+    height: 32px;
+    width: 380px;
+    justify-content: center;
+}
+.navbar a {
+    font-family: var(--mono);
+    font-size: 12px;
+    border: 1px solid transparent;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    color: var(--muted);
+    border-radius: 6px;
+    padding: 2px 3px;
+    width: 60px;
+    height: 20px;
+}
+
+.navbar a:hover {
+    border-color: var(--dourado);
+    background: var(--dourado);
+    color: var(--bg);
+}
+
+.search_nav{
+    display: flex;
+}
+
+.search_nav input {
+    justify-content: center;
+    background: var(--surface2);
+    font-family: var(--mono);
+    font-size: 12px;
+    border-radius: 7px;
+    height: 32px;
+    width: 120px;
+    border-width: 1px;
+    border: 1px solid var(--borda);
+    outline: none; /* remove o contorno azul ao clicar */
+    color: var(--muted);
+    padding: 0 10px; /* espaço interno para o texto não grudar na borda */
+    padding-bottom: 2px;
+}
+
+.search_nav input:hover{
+    border-color: var(--dourado);
+    color: var(--bg);
+    background: var(--dourado);
+}
+
+.search_nav input:hover::placeholder {
+    color: var(--bg);
+}
+
+.secao_principal {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+    position: relative;
+    align-items: center;
+}
+
+.conteudo {
+    flex:1;
+    position: relative;
+    z-index: 1;
+}
+
+.hero_image {
+    display: flex;
+    justify-content: end;
+    position: relative;
+    margin-right: -30px;
+    margin-top: -40px;
+}
+.hero_image img {
+    object-position: center 0%; /*posicao que a imagem fica*/
+    height: 100%;
+    object-fit: cover; /*cobrir espaço sem distorcer */
+}
+
+
+.hero_image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(to bottom, var(--bg) 0%, transparent 67%),
+        linear-gradient(to right, var(--bg) 0%, transparent 65%),
+        linear-gradient(to left, var(--bg) 0%, transparent 89%),    /* efeito para escurecer a foto fazendo que a imagem fique mais imersiva junto ao background*/
+        linear-gradient(to top, var(--bg) 0%, transparent 76%);
+
+}
+.secao_principal h1 {
+    display: flex;
+    font-family: var(--serif);
+    font-weight: 100;
+    font-size: 40px;
+    margin-top: -200px;
+}
+
+.secao_principal span {
+    font-size: 65px;
+}
+
+.secao_principal p {
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    padding-top: 50px;
+}
+
+.buttons_s1 {
+    display: flex;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.explorer_bt {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 12px;
+    font-family: var(--mono);
+    border: 1px solid var(--borda);
+    outline: none;
+    border-radius: 7px;
+    width: 160px;
+    height: 35px;
+    padding-top: 6px;
+}
+
+.doc_bt {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--muted);
+    font-size: 12px;
+    font-family: var(--mono);
+    border: 1px solid var(--borda);
+    outline: none;
+    border-radius: 7px;
+    width: 190px;
+    height: 35px;
+    padding-top: 6px;
+}
+
+.buttons_s1 a:hover {
+    background: var(--dourado);
+    color: var(--bg);
+}
+
+.contagem_s1 {
+    display: flex;
+    justify-content: row;
+    font-family: var(--mono);
+    font-size: 8px;
+    color: var(--muted);
+    padding-top: 40px;
+    gap: 50px;
+}
+
+.contagem_s1 span {
+    color: var(--dourado);
+    font-size: 25px;
+}
+
+.secao_primeira {
+    display: flex;
+    justify-content: space-between; 
+}
+
+.buttons_s2 {
+    display: flex;
+    align-items: center;  
+    margin-right: 0;
+    padding: 20px;
+    gap: 8px;
+    border: 1px solid var(--borda);
+    background: var(--surface);
+    height: 80px;  
+}
+
+.buttons_s2 a {
+    display: flex;
+    padding: 4px 12px;            
+    color: var(--muted);
+    text-decoration: none;
+    outline: none;
+    font-family: var(--mono);
+    font-size: 15px;
+    border: 1px solid var(--borda);
+    border-radius: 7px;
+    height: 40px;
+}
+
+.buttons_s2 a:hover {
+    background: var(--dourado);
+    color: var(--bg);
+}
+
+.destaques_s2 {
+    display: grid; /* display: grid - divide em colunas iguais // repeat(3,1fr) cria 3*//* de tamanho igual // 1fr signif. 1 terço do tamanho */
+    grid-template-columns: repeat(6, 2fr);       
+    margin: 0;                                  
+    padding: 20px;
+    gap: 20px;
+}
+
+.card {
+    padding: 20px;                     
+    border: 1px solid var(--borda);
+    border-radius: 10px;
+    background: var(--surface);
+    
+}
+
+.card--destaque {
+    grid-column: span 2;        /* span 2 - pega 2 colunas */
+}
+
+.categoria1 {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    gap: 20px;
+    width: 200px;
+    font-size: 12px;
+    border: 1px solid var(--dourado);
+    background: #291e00;
+    color: var(--dourado2);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categoria2 {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    font-size: 12px;
+    border: 1px solid #8662b6;
+    background: #280753;
+    color: #b093d4;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categoria3 {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    font-size: 12px;
+    border: 1px solid #488ecf;
+    background: #0a2742;
+    color: #5ea0dd;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categoria4 {
+    display: flex;
+    justify-content: center;
+    width: 110px;
+    font-size: 12px;
+    border: 1px solid var(--dourado);
+    background: #291e00;
+    color: var(--dourado2);
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categoria5 {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    font-size: 12px;
+    border: 1px solid #3b830c;
+    background: #112901;
+    color: #6bb43b;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.categoria6 {
+    display: inline-flex;
+    justify-content: center;
+    width: 60px;
+    font-size: 12px;
+    border: 1px solid #cc44d1;
+    background: #3d043f;
+    color: #cc44d1;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.card h2 {
+    margin-top: 20px;
+    font-family: var(--serif);
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.paragrafo_s2 {
+    display: flex;
+    padding-top: 20px;
+    font-size: 18px;
+    color: var(--muted);
+}
+
+.rodape_s2 {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--borda);
+    padding: 10px;
+    margin-top: 60px;   
+}
+.autor {
+    color: var(--muted);
+}
+.ler {
+    color: var(--dourado);
+}
+.ler--d {
+    color: var(--dourado);
+    font-size: 18px;
+    padding-top: 15px;
+}
+.autor--d {
+    color: var(--muted);
+    font-size: 18px; 
+    padding-top: 15px;
+}
+
+.secao_secundaria {
+    display: grid;      /* 2 colunas com grid para o cards e para o progresso */    
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--borda);
+}
+
+.card2 {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 10px;
+    padding-left: 40px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.card2 h3 {
+    font-family: var(--serif);
+}
+.card2 p {
+   font-family: var(--mono);
+   font: 12px;
+   color: var(--muted);
+}
+.secao_secundaria h2 {
+    padding: 17px;
+    font-size: 15px;
+    font-family: var(--mono);
+    font-weight: 100;
+    color: var(--muted);
+}
+.coracao {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+.coracao img {
+    object-position: center 0%; /*posicao que a imagem fica*/
+    height: 100%;
+    object-fit: cover; /*cobrir espaço sem distorcer */
+}
+.coracao::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+        linear-gradient(to bottom, var(--bg) 0%, transparent 86%),
+        linear-gradient(to right, var(--bg) 0%, transparent 80%),
+        linear-gradient(to left, var(--bg) 0%, transparent 95%),    /* efeito para escurecer a foto fazendo que a imagem fique mais imersiva junto ao background*/
+        linear-gradient(to top, var(--bg) 0%, transparent 99%);
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    color: var(--dourado);
+    margin: 0;
+}
+.logo_rp {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.gloriam {
+    display: flex;
+    justify-content: end;
+    margin-top: 10px;
+}
