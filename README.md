@@ -1,4 +1,4 @@
-✨ **Via Veritatis** é um projeto pessoal criado com o objetivo de desenvolver minhas habilidades em **fullstack** 💻, ao mesmo tempo em que aprofundo meus estudos sobre a fé católica ✝️.
+✨ **Via Veritatis** é um projeto pessoal criado com o objetivo de desenvolver minhas habilidades para virar **fullstack** 💻, ao mesmo tempo em que aprofundo meus estudos sobre a fé católica ✝️.
 
 A proposta é construir um site dedicado à publicação de artigos, documentos e conteúdos de catequese 📚, unindo aprendizado técnico com crescimento espiritual. Mais do que um projeto de programação, o Via Veritatis também é um espaço de formação e busca pela verdade.
 
