@@ -478,50 +478,55 @@ header {
 /* CELULAR (até 768px) */
 @media (max-width: 768px) {
  
-    html { zoom: 1; } /* desativa o zoom de desktop */
+    html { zoom: 1; }
  
-    /* navbar: esconde abas e busca, mantém só o logo */
+    /* --- navbar --- */
+    header {
+        padding: 14px 16px;
+        position: relative;
+        z-index: 10;
+        background: var(--bg);
+    }
     .navbar ul,
     .search_nav {
-        display: none;
+        display: none; /* esconde abas e busca */
     }
     .navbar {
         justify-content: flex-start;
     }
+    .logo {
+        font-size: 16px;
+    }
  
-    /* hero: empilha texto em cima, imagem embaixo */
+    /* --- hero: empilha tudo em coluna --- */
     .secao_principal {
         flex-direction: column;
-        padding: 24px 20px;
         align-items: flex-start;
-        min-height: auto;
+        padding: 20px 16px 0 16px;
+        overflow: hidden;
+    }
+    .conteudo {
+        width: 100%;
+        z-index: 2;
     }
     .secao_principal h1 {
-        font-size: 26px;
-        margin-top: 0; /* remove o margin negativo no celular */
+        font-size: 22px;
+        margin-top: 0; /* remove o margin negativo */
     }
     .secao_principal span {
-        font-size: 38px;
+        font-size: 36px;
     }
     .secao_principal p {
-        padding-top: 20px;
-    }
-    .hero_image {
-        width: 100%;
-        margin: 20px 0 0 0;
-        justify-content: center;
-    }
-    .hero_image img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        object-position: center top;
+        font-size: 11px;
+        padding-top: 16px;
+        line-height: 1.7;
     }
  
-    /* botões hero */
+    /* botões hero em coluna */
     .buttons_s1 {
         flex-direction: column;
         gap: 10px;
+        padding-top: 20px;
     }
     .explorer_bt,
     .doc_bt {
@@ -529,46 +534,98 @@ header {
         justify-content: center;
     }
  
-    /* contagem */
+    /* contagem menor */
     .contagem_s1 {
-        gap: 25px;
+        gap: 20px;
+        padding-top: 24px;
+        padding-bottom: 20px;
+    }
+    .contagem_s1 span {
+        font-size: 18px;
     }
  
-    /* filtros de categoria */
+    /* imagem do Cristo abaixo do conteúdo */
+    .hero_image {
+        width: 100%;
+        margin: 0;
+        position: relative;
+        height: 260px;
+    }
+    .hero_image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+ 
+    /* --- filtros de categoria --- */
     .buttons_s2 {
         height: auto;
         flex-wrap: wrap;
         padding: 12px;
+        gap: 6px;
+    }
+    .buttons_s2 a {
+        font-size: 11px;
+        height: 32px;
+        padding: 4px 10px;
     }
  
-    /* cards: 1 coluna */
+    /* --- cards: 1 coluna --- */
     .destaques_s2 {
         grid-template-columns: 1fr;
         padding: 12px;
+        gap: 12px;
     }
     .card--destaque {
         grid-column: span 1;
     }
+    .card h2 {
+        font-size: 22px;
+    }
+    .paragrafo_s2 {
+        font-size: 14px;
+    }
+    .rodape_s2 {
+        margin-top: 20px;
+    }
  
-    /* seção secundária */
+    /* --- seção secundária --- */
     .secao_secundaria {
         grid-template-columns: 1fr;
-    }
-    .coracao {
-        height: 250px;
+        padding: 12px;
     }
     .card2 {
         margin-left: 0;
         padding-left: 16px;
     }
+    .coracao {
+        height: 220px;
+        overflow: hidden;
+    }
+    .coracao img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
  
-    /* rodapé */
+    /* --- rodapé --- */
     .rodape {
         flex-direction: column;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
         padding: 16px;
+        font-size: 16px;
         text-align: center;
+    }
+    .logo_rp {
+        margin-top: 0;
+        justify-content: center;
+    }
+    .gloriam {
+        justify-content: center;
+        margin-top: 0;
+        font-size: 11px;
     }
 }
 
