@@ -276,11 +276,19 @@ header {
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     padding: 20px;                     
     border: 1px solid var(--borda);
     border-radius: 10px;
     background: var(--surface);
     
+}
+
+.card a {
+    text-decoration: none;
+    margin: 0;
+    margin-top: -10px;
 }
 
 .card--destaque {
@@ -380,7 +388,7 @@ header {
     justify-content: space-between;
     border-top: 1px solid var(--borda);
     padding: 10px;
-    margin-top: 60px;   
+    margin-top: auto;   
 }
 .autor {
     color: var(--muted);

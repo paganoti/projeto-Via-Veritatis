@@ -1,0 +1,65 @@
+[
+  {
+    
+    "_obs": "O arquivo json, serve para dados estruturados,// funcinara para adicionar um artigo novo com facilidade como se ja tivesse um template, filtragem de categorias// banco de dados nivel 1 - pensando no futuro",
+
+    "id": 1,
+    "titulo": "A Eucaristia: Fonte e Ápice da Vida Cristã",
+    "categoria": "Sacramentos",
+    "autor": "Pe. João Silva",
+    "tempo_leitura": 8,
+    "descricao": "Baseado no CIC nn. 1322-1419...",
+    "arquivo": "eucaristia.html"
+  },
+  {
+    "id": 2,
+    "titulo": "A Imaculada Conceição: Fundamentos Dogmáticos",
+    "categoria": "Mariologia",
+    "autor": "Diác. Marcos",
+    "tempo_leitura": 7,
+    "descricao": "Dogma definido por Pio IX em 1854...",
+    "arquivo": "imaculada.html"
+  },
+
+    {
+
+    "id": 3,
+    "titulo": "O Ano Litúrgio e seus Tempos Sagrados",
+    "categoria": "Liturgia",
+    "autor": "Redação",
+    "tempo_leitura": 5,
+    "descricao": "Advendo, Natal, Quaresma, Páscoa e Tempo Comum",
+    "arquivo": "liturgia.html"
+    },
+
+  {
+    "id": 4,
+    "titulo": "Por que Existem Sete Sacramentos?",
+    "categoria": "Apologética",
+    "autor": "Pe. André Lima",
+    "tempo_leitura": 6,
+    "descricao": "A razão teológica e histórica para os sete sacramentos",
+    "arquivo": "apologetica.html"
+  },
+
+     {
+
+    "id": 5,
+    "titulo": "O Cânon Bíblico Católico: 73 Livros",
+    "categoria": "Bíblia",
+    "autor": "Redação",
+    "tempo_leitura": 9,
+    "descricao": "Por que a Bíblia Católica tem 7 Livros a mais que a protestante.",
+    "arquivo": "biblia.html"
+    },
+
+  {
+    "id": 4,
+    "titulo": "Lei Natural e Moral Católica",
+    "categoria": "Moral",
+    "autor": "Pe. André Lima",
+    "tempo_leitura": 6,
+    "descricao": "Ética natural como fundamentos da Lei divina segundo Tomás de Aquino.",
+    "arquivo": "moral.html"
+  }
+]
